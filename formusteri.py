@@ -10,7 +10,7 @@ import numpy as np
 from scipy.stats import f_oneway, ttest_ind
 from sklearn.cluster import KMeans
 
-veri = pd.read_csv("genisletilmis_musteri_verisi.csv")
+veri = pd.read_csv("musteri.csv")
 musteri_sayisi = len(veri)
 ortalama_yas = veri["Doğum Tarihi"].apply(lambda x: 2023 - int(x.split("-")[0])).mean()
 cinsiyet_dağılımı = veri["Cinsiyet"].value_counts()
